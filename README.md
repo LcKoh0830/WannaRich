@@ -1,2 +1,2 @@
 # WannaRich
-A wealth management application
+A wealth management android application
