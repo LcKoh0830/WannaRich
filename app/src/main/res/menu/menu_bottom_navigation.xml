@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_transaction"
+        android:icon="@drawable/ic_transaction"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="1"
+        android:title="Trans." />
+
+    <item
+        android:id="@+id/navigation_calendar"
+        android:icon="@drawable/ic_calendar"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="2"
+        android:title="Calendar"/>
+
+    <item
+        android:id="@+id/navigation_statistic"
+        android:icon="@drawable/ic_statistic"
+        app:showAsAction="always"
+        android:orderInCategory="3"
+        android:title="Statistic"/>
+
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/ic_settings"
+        app:showAsAction="always"
+        android:orderInCategory="4"
+        android:title="Settings"/>
+
+
+</menu>
