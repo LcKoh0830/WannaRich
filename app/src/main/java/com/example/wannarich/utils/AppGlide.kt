@@ -1,4 +1,4 @@
-package com.example.wannarich
+package com.example.wannarich.utils
 
 import android.content.Context
 import com.bumptech.glide.GlideBuilder
