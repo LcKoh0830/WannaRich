@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/navigation_transaction">
+    app:startDestination="@id/navigation_dashboard">
 
     <fragment
-        android:id="@+id/navigation_transaction"
-        android:name="com.example.wannarich.ui.TransactionFragment"
-        android:label="Transaction"
-        tools:layout="@layout/fragment_transaction"/>
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.wannarich.ui.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard"/>
 
     <fragment
         android:id="@+id/navigation_calendar"

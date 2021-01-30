@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/navigation_transaction"
+        android:id="@+id/navigation_dashboard"
         android:icon="@drawable/ic_transaction"
         app:showAsAction="ifRoom"
         android:orderInCategory="1"
