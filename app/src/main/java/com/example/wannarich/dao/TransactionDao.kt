@@ -18,4 +18,7 @@ interface TransactionDao {
     @Query("SELECT SUM(amount) FROM `TRANSACTION` WHERE type == 2")
     fun getTotalExpense(): LiveData<Double>
 
+    @Query("SELECT * FROM `Transaction`")
+    fun list(): LiveData<List<Transaction>>
+
 }

@@ -22,7 +22,10 @@ class TransactionViewModel @ViewModelInject constructor(
 
     val totalBalance = MediatorLiveData<Double?>()
 
+    val allTransaction = transactionDao.list()
+
     init {
+        // observe any changes of income/expense to trigger changes in balance
         totalBalance.addSource(totalIncome) {
             totalBalance.value = getDifference(totalIncome.value, totalExpense.value)
         }
@@ -36,6 +39,8 @@ class TransactionViewModel @ViewModelInject constructor(
             transactionDao.insertTransaction(trans)
         }
     }
+
+
 
     private fun getDifference(income: Double?, expense: Double?): Double?{
         return if(income != null && expense != null) {
