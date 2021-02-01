@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
-import com.bumptech.glide.Glide
+import coil.load
 import com.example.wannarich.R
 import com.example.wannarich.databinding.FragmentSettingsBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -55,9 +55,7 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
                     with(binding) {
                         userName.text = account.displayName
                         userEmail.text = account.email
-                        Glide.with(this@SettingsFragment)
-                            .load(account.photoUrl)
-                            .into(userImage)
+                        userImage.load(account.photoUrl)
                     }
 
                 }

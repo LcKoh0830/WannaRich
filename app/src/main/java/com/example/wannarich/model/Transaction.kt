@@ -8,11 +8,12 @@ import com.example.wannarich.utils.Converters
 import java.util.*
 
 @Entity
-data class Income(
-    @PrimaryKey(autoGenerate = true) val id: Int,
+data class Transaction(
+    @PrimaryKey(autoGenerate = true) val id: Int = 0,
+    @ColumnInfo(name = "type") val type: Int,  // 1-income, 2-expense
     @ColumnInfo(name = "amount") val amount: Double,
     @ColumnInfo(name = "description") val description: String,
-    @ColumnInfo(name = "category") val category: String,
-    @ColumnInfo(name = "created_date") @TypeConverters(Converters::class) val created_date: Date
+    @ColumnInfo(name = "category") val category: Int,
+    @ColumnInfo(name = "created_date") @TypeConverters(Converters::class) val created_date: Date,
 )
 

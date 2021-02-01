@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.TransactionFragment">
+    tools:context=".ui.DashboardFragment">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -39,8 +39,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:layout_gravity="center_horizontal"
-                    android:text="999" />
+                    android:layout_gravity="center_horizontal" />
 
             </LinearLayout>
 
@@ -64,8 +63,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="10dp"
-                    android:text="999" />
+                    android:layout_marginTop="10dp" />
 
             </LinearLayout>
 
@@ -89,8 +87,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:layout_gravity="center_horizontal"
-                    android:text="999" />
+                    android:layout_gravity="center_horizontal" />
 
             </LinearLayout>
 
@@ -99,7 +96,7 @@
     </androidx.cardview.widget.CardView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floating_action_button"
+        android:id="@+id/fab_add_transaction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
