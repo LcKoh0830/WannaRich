@@ -29,7 +29,7 @@ class DashboardFragment : Fragment(R.layout.fragment_dashboard), TransactionAdap
         setupRecyclerView()
 
         binding.fabAddTransaction.setOnClickListener {
-            val action = DashboardFragmentDirections.actionNavigationDashboardToAddTransactionFragment()
+            val action = DashboardFragmentDirections.actionNavigationDashboardToAddTransactionFragment(null)
             NavHostFragment.findNavController(this).navigate(action)
         }
 
@@ -57,7 +57,7 @@ class DashboardFragment : Fragment(R.layout.fragment_dashboard), TransactionAdap
     }
 
     override fun onTransactionClick(trans: Transaction) {
-        // TODO - transaction preview screen (edit/delete)
-        Timber.i("$trans")
+        val action = DashboardFragmentDirections.actionNavigationDashboardToViewRecordFragment(trans)
+        NavHostFragment.findNavController(this).navigate(action)
     }
 }

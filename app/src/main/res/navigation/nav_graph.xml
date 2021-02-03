@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_navigation_dashboard_to_addTransactionFragment"
             app:destination="@id/addTransactionFragment" />
+        <action
+            android:id="@+id/action_navigation_dashboard_to_viewRecordFragment"
+            app:destination="@id/viewRecordFragment" />
     </fragment>
 
     <fragment
@@ -36,7 +39,24 @@
         android:id="@+id/addTransactionFragment"
         android:name="com.example.wannarich.ui.AddTransactionFragment"
         android:label="AddTransactionFragment"
-        tools:layout="@layout/fragment_add_transaction"/>
+        tools:layout="@layout/fragment_add_transaction">
+        <argument
+            android:name="trans"
+            app:argType="com.example.wannarich.model.Transaction"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewRecordFragment"
+        android:name="com.example.wannarich.ui.ViewRecordFragment"
+        android:label="Record"
+        tools:layout="@layout/fragment_view_record">
+        <argument
+            android:name="trans"
+            app:argType="com.example.wannarich.model.Transaction" />
+        <action
+            android:id="@+id/action_viewRecordFragment_to_addTransactionFragment"
+            app:destination="@id/addTransactionFragment" />
+    </fragment>
 
 
 </navigation>

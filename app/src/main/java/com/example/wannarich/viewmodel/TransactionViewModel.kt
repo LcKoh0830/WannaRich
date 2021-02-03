@@ -40,16 +40,16 @@ class TransactionViewModel @ViewModelInject constructor(
         }
     }
 
-
+    fun deleteTransaction(trans: Transaction) {
+        viewModelScope.launch {
+            transactionDao.deleteTransaction(trans)
+        }
+    }
 
     private fun getDifference(income: Double?, expense: Double?): Double?{
         return if(income != null && expense != null) {
             income - expense
         } else null
     }
-
-
-
-
 
 }
